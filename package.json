@@ -4,11 +4,17 @@
   "description": "Subtitulamos Website",
   "main": "index.js",
   "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "subtitulamos",
   "license": "LGPL-3.0-or-later",
   "dependencies": {
     "ws": "^7.3.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.5"
   }
 }
