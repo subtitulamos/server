@@ -4,8 +4,7 @@
  */
 
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config(); // Initializae config as early as possible
 
-import { setupInternalListener } from './translation_listener';
-
-setupInternalListener();
+import { setup } from './server';
+setup();
