@@ -4,7 +4,7 @@
  */
 
 import http from 'http';
-import polka from 'polka';
+const polka = require('polka');
 import { json } from 'body-parser';
 import WebSocket from 'ws';
 import TokenGrant from './token_grant';
@@ -21,7 +21,7 @@ function setupInternalListener() {
     }
 
     app.use(json()); // Parsing of body requests with JSON
-    app.post('/allow', (req: any, res) => {
+    app.post('/allow', (req: any, res: any) => {
         if (!req.body || !req.body.sub_id || !req.body.token) {
             res.end("ERR");
             return;
@@ -31,7 +31,7 @@ function setupInternalListener() {
         res.end("OK");
     });
 
-    app.post('/message', (req: any, res) => {
+    app.post('/message', (req: any, res: any) => {
         if (!req.body || !req.body.sub_id) {
             res.end("ERR");
             return;

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "prod": "tsc && node ./build/index.js",
+    "prod": "tsc && node ./built/index.js",
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +18,8 @@
     "ws": "^7.3.0"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.0",
     "@types/node": "^14.0.13",
-    "@types/polka": "^0.5.1",
     "@types/ws": "^7.2.5",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.9.5"
