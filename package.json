@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
+    "prod": "tsc && node ./build/index.js",
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,7 +25,7 @@
     "typescript": "^3.9.5"
   },
   "bugs": {
-    "url": "https://github.com/subtitulamos/subtitulamos-translate/issues"
+    "url": "https://github.com/subtitulamos/server/issues"
   },
   "private": true
 }
