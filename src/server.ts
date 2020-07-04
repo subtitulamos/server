@@ -61,6 +61,12 @@ function onConnectionCreated(ws: any, req: any) {
 
     socketsBySubtitle[req.subID].push(ws);
 
+    ws.on('message', (m: any) => {
+        if (m === "ping") {
+            ws.send("pong");
+        }
+    });
+
     ws.on('close', function () {
         if (req.body && req.body.subID) {
             socketsBySubtitle[req.body.subID] = socketsBySubtitle[req.body.subID].filter(arrWs => arrWs !== ws);
